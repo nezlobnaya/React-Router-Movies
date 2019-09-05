@@ -5,7 +5,7 @@ const SavedList = props => (
   <div className="saved-list">
     <h3>Saved Movies:</h3>
     {props.list.map((movie, index) => (
-      <NavLink to={`/movies/${movie.id}`} className="saved-movie">{movie.title}</NavLink>
+      <NavLink to={`/movies/${movie.id}`} activeClassName="saved-active">{movie.title}</NavLink>
     ))}
     <Link to={`/`}>
       <div className="home-button">Home</div>

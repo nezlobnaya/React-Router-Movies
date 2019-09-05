@@ -11,6 +11,7 @@ const MovieList = props => {
         .get('http://localhost:5000/api/movies')
         .then(response => {
           setMovies(response.data);
+          console.log(response);
         })
         .catch(error => {
           console.error('Server Error', error);
