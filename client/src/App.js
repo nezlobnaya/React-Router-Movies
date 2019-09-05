@@ -8,6 +8,10 @@ const App = () => {
   const [savedList, setSavedList] = useState( [] );
 
   const addToSavedList = movie => {
+    
+    /*to prevent multiple saving of a movie*/
+    (!savedList.includes(movie))&& 
+
     setSavedList( [...savedList, movie] );
     
   };
