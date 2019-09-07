@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import MovieCard from './MovieCard';
 
 const MovieList = props => {
+  console.log('props', props)
   const [movies, setMovies] = useState([])
   useEffect(() => {
     const getMovies = () => {

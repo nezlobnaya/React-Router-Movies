@@ -10,15 +10,16 @@ const App = () => {
   const addToSavedList = movie => {
     
     /*to prevent multiple saving of a movie*/
-    (!savedList.includes(movie))&& 
+    const present = savedList.find(el => el.title === movie.title)
+    if (!present) {
+      setSavedList( [...savedList, movie] );
+    }
+    // //The one below didn't work in all instances!:
+    // (!savedList.includes(movie))&& 
 
-    setSavedList( [...savedList, movie] );
+    // setSavedList( [...savedList, movie] );
     
   };
-
-
-
-
 
   return (
     <div>
